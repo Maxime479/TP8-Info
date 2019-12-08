@@ -1,33 +1,26 @@
-//
-// Created by Maxime on 02/12/2019.
-//
-
+#include <iostream>
 #include "Robot.h"
 
-
-Robot::Robot(char name, int position, void montrer, void testRobot, void avancer){}
-
-
-
-
-
-
-void testRobot()
+///Constructeur par défaut
+Robot::Robot() : m_aspect('A'), m_position(0)
 {
-    Robot x{'A'};
-    for (int i=0; i<8; ++i)
-    {
-        x.montrer();
-        x.avancer(1); // Si on mettait 2 ici on irait 2x plus vite !
-    }
+
 }
-
-void montrer(){
-
+///Surcharge du constructeur
+Robot::Robot(char aspect) : m_aspect(aspect), m_position(0)
+{
 
 }
 
-void avancer(){
+///Faire avancer le Robot
+void Robot::avancer(int nb_Avancer)
+{
+    m_position += nb_Avancer;
+}
 
-
+///Afficher le Robot
+/// TIPS du cours: std::string(n, ' ') répéter n fois un caractère ' ' dans un affichage sans faire de boucle
+void Robot::montrer()
+{
+    std::cout << std::string(m_position, ' ') << m_aspect << std::endl;
 }

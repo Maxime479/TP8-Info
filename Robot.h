@@ -1,31 +1,33 @@
-//
-// Created by Maxime on 02/12/2019.
-//
+#ifndef TP8_INFO_ROBOT_H
+#define TP8_INFO_ROBOT_H
 
-#ifndef TP8_ROBOT_H
-#define TP8_ROBOT_H
-
-#include <iostream>
-
-
-class Robot{
-
-private:
-    char name = 'A';
-    int position;
+///Classe mère Robot
+class Robot
+{
 
 public:
-    Robot(int position = 0);
-    ~Robot() = default;
-    void testRobot();
-    void montrer();
-    void avancer();
+    ///Constructeur par défaut
+    Robot();
 
+    ///Surcharge du Constructeur aspect en paramètre
+    Robot(char aspect);
+
+    ///Méthodes virtuelles pour le polymorphisme
+    ///On ajoute seulement "virtual" dans la classe mère et les classes filles en héritent !
+    virtual void montrer();
+
+    ///On passe en paramètre de la fonction un entier pour faire avancer le Robot
+    virtual void avancer(int nb_Avancer);
+
+protected:
+/// Protected car les classes filles doivent y accéder
+
+    ///Aspect du Robot
+    char m_aspect;
+
+    ///Position du Robot
+    int m_position;
 };
 
 
-
-
-
-
-#endif //TP8_ROBOT_H
+#endif //TP8_INFO_ROBOT_H
