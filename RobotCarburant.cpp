@@ -15,6 +15,7 @@ void RobotCarburant::avancer(int nb_Avancer)
         {
             m_carburant -= 1;
             m_position += 1;
+
         }
     }
 }
