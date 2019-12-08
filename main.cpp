@@ -26,7 +26,7 @@ int main()
 {
     /// Lancement de la fonction menu
     menu();
-    
+
 
     return 0;
 }
@@ -164,9 +164,8 @@ void menu()
               << "3/ Affichage Conteneur Polymorphe" << std::endl
               << "4/ Les 3 en meme temps" << std::endl;
 
- //   int choix;
+
     /// Blindage de la saisie utilisateur du menu
-  //  do {
         std::cout << "\nChoix menu : ";
         std::cin >> choix;
 

@@ -6,7 +6,7 @@ void testRobotPolymorphe(Robot& robotPolymorphe)
     for (int i = 0; i < 8; ++i)
     {
         robotPolymorphe.montrer();
-        robotPolymorphe.avancer(1); // Si on mettait 2 ici on irait 2x plus vite !
+        robotPolymorphe.avancer(1);
     }
 }
 
