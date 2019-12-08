@@ -25,10 +25,8 @@ void menu();
 int main()
 {
     /// Lancement de la fonction menu
-    //menu();
-
-    int a =3;
-    std::cout << a << std::endl;
+    menu();
+    
 
     return 0;
 }
@@ -157,22 +155,27 @@ void conteneurPolymorphe()
 /// Menu du programme
 void menu()
 {
+    int choix;
+    do{
     /// Affichage du Menu
-    std::cout << "0/ Quitter" << std::endl
+    std::cout << "\n0/ Quitter" << std::endl
               << "1/ Affichage Tests Directs" << std::endl
               << "2/ Affichage Tests Polymorphisme" << std::endl
               << "3/ Affichage Conteneur Polymorphe" << std::endl
               << "4/ Les 3 en meme temps" << std::endl;
 
-    int choix;
+ //   int choix;
     /// Blindage de la saisie utilisateur du menu
-    do {
-        std::cout << "Choix menu : ";
+  //  do {
+        std::cout << "\nChoix menu : ";
         std::cin >> choix;
+
         switch (choix) {
             case 0: ///Quitter
+            {
+                std::cout<<"\nMerci d'avoir utilise ce programme"<<std::endl;
                 break;
-
+            }
             case 1:
             {
                 testsDirects();
@@ -196,10 +199,10 @@ void menu()
                 break;
             }
             default:
-                std::cout << "Erreur choix menu" << std::endl;
+                std::cout << "/!\\ /!\\ Erreur choix menu, veuillez recommencer /!\\ /!\\" << std::endl;
                 break;
         }
-    } while (choix < 0 || choix >4);
+    } while (choix != 0);
 }
 
 
